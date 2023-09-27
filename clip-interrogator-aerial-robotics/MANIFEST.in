@@ -1,0 +1,6 @@
+include clip_interrogator/data/frames.txt
+include clip_interrogator/data/envs.txt
+include clip_interrogator/data/res.txt
+include clip_interrogator/data/contexts.txt
+include clip_interrogator/data/aerials.txt
+include requirements.txt

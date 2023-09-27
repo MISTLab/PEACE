@@ -1,0 +1,7 @@
+[submodule "src/ros2_satellite_aerial_view_simulator"]
+	path = src/ros2_satellite_aerial_view_simulator
+	url = https://github.com/ricardodeazambuja/ros2_satellite_aerial_view_simulator.git
+
+[submodule "server"]
+    path = server
+    url = https://git.mistlab.ca/mbong/dovesei-peace.git
