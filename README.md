@@ -2,7 +2,7 @@
 
 This work is an extenion of DOVESEI (https://arxiv.org/abs/2308.11471), where we improved on the prompt generation and engineering inside DOVESEI. The objective was to generate prompts that are dynamic, such that prompts are adaptive to observed images instead of a static prompt. In addition, they are automatically engineered to describe the observed images better.
 
-Details about PEACE: https://git.mistlab.ca/mbong/dovesei-peace/-/blob/master/clip-interrogator-aerial-robotics/README.md?ref_type=heads
+Details about PEACE: [https://git.mistlab.ca/mbong/dovesei-peace/-/blob/master/clip-interrogator-aerial-robotics/README.md?ref_type=heads](https://github.com/MISTLab/DOVESEI-PEACE/blob/master/clip-interrogator-aerial-robotics/README.md)
 
 # DOVESEI
 ## Focused Onboard Open Vocabulary Enhanced Visual Servoing for UAV Safe Landing
