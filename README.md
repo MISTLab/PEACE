@@ -1,5 +1,5 @@
 # PEACE :v:: Prompt Engineering Automation for CLIPSeg Enhancement
-# CLIP Interrogator for Aerial Robotics by [@HaechanMarkBong](https://github.com/HaeChanBong/clip-interrogator-aerial-robotics/tree/HaechanMarkBong-patch-1)
+## CLIP Interrogator for Aerial Robotics
 
 Built on top of CLIP Interrogator by [@pharmapsychotic](https://twitter.com/pharmapsychotic)
 
