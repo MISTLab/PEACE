@@ -40,10 +40,10 @@ ci = Interrogator(config)
 ci.config.chunk_size = 2048
 ci.config.env_intermediate_count = 2048
 
-IGNORE_FOCUS = False # used for ablation experiments
+IGNORE_FOCUS = False # For ablation experiments
 
-# We use the same FOV from the camera in the stereo pair for the semantic sementation because the second doesn't need a precise projection
-FOV = math.radians(73) #TODO: get this from the camera topic...
+# We use the same FOV from the camera in the stereo pair for the semantic sementation because the second doesn't need a precise projection.
+FOV = math.radians(73) #TODO: Get this from the camera topic.
 
 negative_prompts = ["building, house, apartment-building, warehouse, shed, garage", 
                     "roof, rooftop, terrace, shelter, dome, canopy, ceiling", 
@@ -63,7 +63,6 @@ PROMPT_ENGINEERING = "a bird's eye view of a {}, ingame screen shot, bad graphic
 
 NEGATIVE_PROMPTS = ";".join(negative_prompts)
 POSITIVE_PROMPTS = ";".join(positive_prompts)
-
 
 class LandingState(Enum):
     SEARCHING = 0 
@@ -90,9 +89,7 @@ class LandingStatus:
     curr_threshold: float = .0
     heatmap_received: bool = False
 
-
 class LandingModule(Node):
-
     def __init__(self, debug = False, savefile = None):
         super().__init__('landing_module')
         self.declare_parameter('img_topic', '/carla/flying_sensor/rgb_down/image')
@@ -262,7 +259,6 @@ class LandingModule(Node):
 
         self.get_logger().info('Ready to publish some twist messages!')
 
-
     def parameters_callback(self, params):
         for param in params:
             try:
@@ -298,7 +294,6 @@ class LandingModule(Node):
 
         except TransformException as ex:
             self.get_logger().error(f'Could not transform {map_frame} to {target_frame}: {ex}')
-
 
     def get_depth_stats(self, depthmsg):
         # Masks the depth image received leaving only a circle that approximates the UAV's safety radius projected according to its current altitude.
@@ -455,7 +450,7 @@ class LandingModule(Node):
         twist_msg = Twist()
         # The UAV's maximum bank angle is limited to a very small value and this is why such a simple control works.
         # Additionally, the assumption is that the maximum speed is very low otherwise the moving average used in the semantic segmentation will break.
-        # TODO: make it a proper controller ...
+        # TODO: make it a proper controller.
         
         self.int_x += x
         self.int_y += y     
@@ -715,7 +710,7 @@ class LandingModule(Node):
             x,y = self.search4new_place_direction
             z = 0.0
 
-        return x,y,z
+        return x, y, z
 
     def on_shutdown_cb(self):
         self.landing_status.state = LandingState.SHUTTING_DOWN
