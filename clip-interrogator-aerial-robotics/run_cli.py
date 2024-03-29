@@ -18,12 +18,12 @@ def inference(ci, image, mode):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--clip', default='ViT-L-14/openai', help='name of CLIP model to use')
-    parser.add_argument('-d', '--device', default='auto', help='device to use (auto, cuda or cpu)')
-    parser.add_argument('-f', '--folder', help='path to folder of images')
-    parser.add_argument('-i', '--image', help='image file or url')
-    parser.add_argument('-m', '--mode', default='best', help='best, classic, or fast')
-    parser.add_argument("--lowvram", action='store_true', help="Optimize settings for low VRAM")
+    parser.add_argument('-c', '--clip', default = 'ViT-L-14/openai', help = 'name of CLIP model to use')
+    parser.add_argument('-d', '--device', default = 'auto', help = 'device to use (auto, cuda or cpu)')
+    parser.add_argument('-f', '--folder', help = 'path to folder of images')
+    parser.add_argument('-i', '--image', help = 'image file or url')
+    parser.add_argument('-m', '--mode', default = 'best', help = 'best, classic, or fast')
+    parser.add_argument("--lowvram", action = 'store_true', help = "Optimize settings for low VRAM")
 
     args = parser.parse_args()
     if not args.folder and not args.image:
@@ -34,14 +34,14 @@ def main():
         print("Specify a folder or batch processing or a single image, not both")
         exit(1)
 
-    # validate clip model name
+    # Validate clip model name
     models = list_clip_models()
     if args.clip not in models:
         print(f"Could not find CLIP model {args.clip}!")
         print(f"    available models: {models}")
         exit(1)
 
-    # select device
+    # Select device
     if args.device == 'auto':
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         if not torch.cuda.is_available():
@@ -49,13 +49,13 @@ def main():
     else:
         device = torch.device(args.device)
 
-    # generate a nice prompt
-    config = Config(device=device, clip_model_name=args.clip)
+    # Generate a nice prompt
+    config = Config(device = device, clip_model_name = args.clip)
     if args.lowvram:
         config.apply_low_vram_defaults()
     ci = Interrogator(config)
 
-    # process single image
+    # Process single image
     if args.image is not None:
         image_path = args.image
         if str(image_path).startswith('http://') or str(image_path).startswith('https://'):
@@ -67,7 +67,7 @@ def main():
             exit(1)
         print(inference(ci, image, args.mode))
 
-    # process folder of images
+    # Process folder of images
     elif args.folder is not None:
         if not os.path.exists(args.folder):
             print(f'The folder {args.folder} does not exist!')
