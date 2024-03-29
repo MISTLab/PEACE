@@ -10,14 +10,14 @@ except ImportError:
     exit(1)
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--lowvram", action='store_true', help="Optimize settings for low VRAM")
-parser.add_argument('-s', '--share', action='store_true', help='Create a public link')
+parser.add_argument("--lowvram", action = 'store_true', help = "Optimize settings for low VRAM")
+parser.add_argument('-s', '--share', action = 'store_true', help = 'Create a public link')
 args = parser.parse_args()
 
 if not torch.cuda.is_available():
     print("CUDA is not available, using CPU. Warning: this will be very slow!")
 
-config = Config(cache_path="cache")
+config = Config(cache_path = "cache")
 if args.lowvram:
     config.apply_low_vram_defaults()
 ci = Interrogator(config)
@@ -68,29 +68,29 @@ def image_to_prompt(image, mode, clip_model_name, blip_model_name):
 def prompt_tab():
     with gr.Column():
         with gr.Row():
-            image = gr.Image(type='pil', label="Image")
+            image = gr.Image(type = 'pil', label = "Image")
             with gr.Column():
-                mode = gr.Radio(['best', 'fast', 'classic', 'negative'], label='Mode', value='best')
-                clip_model = gr.Dropdown(list_clip_models(), value=ci.config.clip_model_name, label='CLIP Model')
-                blip_model = gr.Dropdown(list_caption_models(), value=ci.config.caption_model_name, label='Caption Model')
-        prompt = gr.Textbox(label="Prompt")
+                mode = gr.Radio(['best', 'fast', 'classic', 'negative'], label = 'Mode', value = 'best')
+                clip_model = gr.Dropdown(list_clip_models(), value = ci.config.clip_model_name, label = 'CLIP Model')
+                blip_model = gr.Dropdown(list_caption_models(), value = ci.config.caption_model_name, label = 'Caption Model')
+        prompt = gr.Textbox(label = "Prompt")
     button = gr.Button("Generate prompt")
-    button.click(image_to_prompt, inputs=[image, mode, clip_model, blip_model], outputs=prompt)
+    button.click(image_to_prompt, inputs=[image, mode, clip_model, blip_model], outputs = prompt)
 
 def analyze_tab():
     with gr.Column():
         with gr.Row():
-            image = gr.Image(type='pil', label="Image")
-            model = gr.Dropdown(list_clip_models(), value='ViT-L-14/openai', label='CLIP Model')
+            image = gr.Image(type = 'pil', label = "Image")
+            model = gr.Dropdown(list_clip_models(), value = 'ViT-L-14/openai', label = 'CLIP Model')
         with gr.Row():
-            res = gr.Label(label="res", num_top_classes=5)
-            frame = gr.Label(label="frame", num_top_classes=5)        
-            context = gr.Label(label="context", num_top_classes=5)
-            aerialt = gr.Label(label="aerial", num_top_classes=5)
-            positive = gr.Label(label="positive", num_top_classes=5)
-            env = gr.Label(label="env", num_top_classes=5)
+            res = gr.Label(label = "res", num_top_classes = 5)
+            frame = gr.Label(label = "frame", num_top_classes = 5)        
+            context = gr.Label(label = "context", num_top_classes = 5)
+            aerialt = gr.Label(label = "aerial", num_top_classes = 5)
+            positive = gr.Label(label = "positive", num_top_classes = 5)
+            env = gr.Label(label = "env", num_top_classes = 5)
     button = gr.Button("Analyze")
-    button.click(image_analysis, inputs=[image, model], outputs=[res, frame, context, aerial, positive, env])
+    button.click(image_analysis, inputs = [image, model], outputs = [res, frame, context, aerial, positive, env])
 
 with gr.Blocks() as ui:
     gr.Markdown("# <center>🕵️‍♂️ CLIP Interrogator 🕵️‍♂️</center>")
@@ -99,4 +99,4 @@ with gr.Blocks() as ui:
     with gr.Tab("Analyze"):
         analyze_tab()
 
-ui.launch(show_api=False, debug=True, share=args.share)
+ui.launch(show_api = False, debug = True, share = args.share)
