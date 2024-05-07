@@ -9,7 +9,10 @@ Generate prompts suited for aerial robotics (real and simlation) to be used for 
 
 ## About
 <img src = "assets/comparison.png" alt = "Figure 2: Segmetation Difference" width = "100%">
-Comparison of CLIP and CLIPSeg’s original prompt engineering and PEACE using images from [CARLA](https://carla.org/). 
+Comparison of CLIP and CLIPSeg’s original prompt engineering and PEACE using images from 
+
+[CARLA](https://carla.org/) 
+
 a) A photo of grass 
 b) A photo of grass in animation play morning autumn 
 c) A photo of grass 
