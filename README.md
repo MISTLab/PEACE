@@ -5,7 +5,7 @@ Built on top of CLIP Interrogator by [@pharmapsychotic](https://twitter.com/phar
 
 Generate prompts suited for aerial robotics (real and simlation) to be used for CLIPSeg.
 
-<img src = "assets/mPEACE.PNG" alt = "Figure 1: System Architecture" width = "100%">
+<img src = "assets/PEACE.PNG" alt = "Figure 1: System Architecture" width = "100%">
 
 ## About
 <img src = "assets/comparision.png" alt = "Figure 2: Segmetation Difference" width = "100%">
