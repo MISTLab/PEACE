@@ -31,14 +31,19 @@ from cv_bridge import CvBridge
 from PIL import Image
 from clip_interrogator import Config, Interrogator
 
-caption_model_name = 'blip-base'
-clip_model_name = 'ViT-L-14/openai'
-config = Config()
-config.clip_model_name = clip_model_name
-config.caption_model_name = caption_model_name
-ci = Interrogator(config)
-ci.config.chunk_size = 2048
-ci.config.env_intermediate_count = 2048
+if EXPERIMENT_TYPE == "PEACE":
+    from clip_interrogator import Config, Interrogator
+    from PIL import Image
+
+    PEACE_MAX_COUNT = 200
+    caption_model_name = 'blip-base'
+    clip_model_name = 'ViT-L-14/openai'
+    config = Config()
+    config.clip_model_name = clip_model_name
+    config.caption_model_name = caption_model_name
+    ci = Interrogator(config)
+    ci.config.chunk_size = 2048
+    ci.config.env_intermediate_count = 2048
 
 IGNORE_FOCUS = False # For ablation experiments
 
