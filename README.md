@@ -1,4 +1,4 @@
-# PEACE :v:: Prompt Engineering Automation for CLIPSeg Enhancement
+# PEACE :v:: Prompt Engineering Automation for CLIPSeg Enhancement in Aerial Safe-Landing Segmentation
 ## CLIP Interrogator for Aerial Robotics
 
 Built on top of CLIP Interrogator by [@pharmapsychotic](https://twitter.com/pharmapsychotic)
