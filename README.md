@@ -1,9 +1,8 @@
 # PEACE :v:: Prompt Engineering Automation for CLIPSeg Enhancement in Aerial Safe-Landing Segmentation
-## CLIP Interrogator for Aerial Robotics
 
-Built on top of CLIP Interrogator by [@pharmapsychotic](https://twitter.com/pharmapsychotic)
-
-Generate prompts suited for aerial robotics (real and simlation) to be used for CLIPSeg.
+PEACE enables the possibility of dynamically generating prompts that are specifically optimized for an input image. We believe that this is an important step towards developing more robust autonomous UAV systems. In summary, our main contributions are:
+1) Dynamic aerial prompt engineering per image frame that can adapt to changing environments during safe-landing zone segmentation.
+2) Introduce the method of combining positive and negative term segmentations to improve safe-landing zone segmentation accuracy: Generate segmentations for all safe-landing zones (positive terms: all target classes that are considered safe to land such as grass, park, water, etc.) and unsafe-landing zones (negative terms: all classes that are unsafe to land such as concrete, street, building, etc.). Segmentations of positive terms are stacked to merge safe-landing zone segmentations and the segmentations of negative terms are also stacked and merged to segment all unsafe-landing zones. Finally, the merged segmentations of negative terms are used to eliminate unsafe landing zones from the merged segmentations of positive terms.
 
 <img src = "assets/PEACE.PNG" alt = "Figure 1: System Architecture" width = "100%">
 
