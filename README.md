@@ -4,7 +4,7 @@ PEACE enables the possibility of dynamically generating prompts that are specifi
 1) Dynamic aerial prompt engineering per image frame that can adapt to changing environments during safe-landing zone segmentation.
 <img src = "assets/PEACE_DP.svg" alt = "Figure 1: PEACE Data Pipeline" width = "100%">
 2) Introduce the method of combining positive and negative term segmentations to improve safe-landing zone segmentation accuracy: Generate segmentations for all safe-landing zones (positive terms: all target classes that are considered safe to land such as grass, park, water, etc.) and unsafe-landing zones (negative terms: all classes that are unsafe to land such as concrete, street, building, etc.). Segmentations of positive terms are stacked to merge safe-landing zone segmentations and the segmentations of negative terms are also stacked and merged to segment all unsafe-landing zones. Finally, the merged segmentations of negative terms are used to eliminate unsafe landing zones from the merged segmentations of positive terms.
-<img src = "assets/PEACE_Seg.svg" alt = "Figure 2: PEACE Data Pipeline" width = "120%" style="overflow: visible">
+<img src = "assets/PEACE_Seg.svg?sanitize=true" alt = "Figure 2: PEACE Data Pipeline" width = "100%">
 
 ## About
 <img src = "assets/comparison.png" alt = "Figure 3: Segmetation Difference" width = "100%">
