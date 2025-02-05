@@ -7,7 +7,7 @@ PEACE enables the possibility of dynamically generating prompts that are specifi
 <img src = "assets/PEACE_Seg.svg" alt = "Figure 2: PEACE Data Pipeline" width = "100%">
 
 ## About
-<img src = "assets/comparison.png" alt = "Figure 3: Segmetation Difference" width = "100%">
+<img src = "assets/comparison.png" alt = "Figure 3: Segmetation Difference" width = "100%" style="overflow: visible">
 
 Comparison of CLIP and CLIPSeg’s original prompt engineering and PEACE using images from [CARLA](https://carla.org/). <br />
 
