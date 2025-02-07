@@ -1,4 +1,4 @@
-# PEACE :v:: Prompt Engineering Automation for CLIPSeg Enhancement in Aerial Safe-Landing Segmentation
+# PEACE :v:: Prompt Engineering Automation for CLIPSeg Enhancement for Safe-Landing Zone Segmentation
 
 PEACE enables the possibility of dynamically generating prompts that are specifically optimized for an input image. We believe that this is an important step towards developing more robust autonomous UAV systems. In summary, our main contributions are:
 1) Dynamic aerial prompt engineering per image frame that can adapt to changing environments during safe-landing zone segmentation.
