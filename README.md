@@ -14,7 +14,7 @@ Comparison of CLIP and CLIPSeg’s original prompt engineering and PEACE using i
 a) A photo of grass <br />
 b) A blurry photo of grass in autumn <br />
 c) A photo of grass <br />
-d) A 3D photo of grass in morining <br />
+d) A 3D photo of grass in morning <br />
 
 The **CLIP Interrogator** is a prompt engineering tool that combines OpenAI's [CLIP](https://openai.com/blog/clip/) and Salesforce's [BLIP](https://blog.salesforceairesearch.com/blip-bootstrapping-language-image-pretraining/) to optimize text prompts to match a given image. Use the resulting prompts with text-to-image models like [CLIPSeg](https://github.com/timojl/clipseg).
 This work is an extenion of DOVESEI (https://arxiv.org/abs/2308.11471), where we improved on the prompt generation and engineering inside DOVESEI. The objective was to generate prompts that are dynamic, such that prompts are adaptive to observed images instead of a static prompt. In addition, they are automatically engineered to describe the observed images better.
