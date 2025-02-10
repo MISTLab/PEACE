@@ -2,7 +2,7 @@
 
 This work is an extenion of DOVESEI (https://arxiv.org/abs/2308.11471), where we improved on the prompt generation and engineering inside DOVESEI, and improved on merging segmentation by stacking target and non-target segmemnntations. The objective was to generate prompts that are dynamic, such that prompts are adaptive to observed images instead of a static prompt.
 
-Details about DOVESEI: https://github.com/MISTLab/DOVESEI/blob/main/README.md
+Details about DOVESEI: https://github.com/MISTLab/DOVESEI/blob/main/README.md  <br />
 PEACE enables the possibility of dynamically generating prompts that are specifically optimized for an input image. We believe that this is an important step towards developing more robust autonomous UAV systems. In summary, our main contributions are:
 1) Dynamic aerial prompt engineering per image frame that can adapt to changing environments during safe-landing zone segmentation.
 <img src = "assets/PEACE_DP.svg" alt = "Figure 1: PEACE Data Pipeline" width = "100%">
