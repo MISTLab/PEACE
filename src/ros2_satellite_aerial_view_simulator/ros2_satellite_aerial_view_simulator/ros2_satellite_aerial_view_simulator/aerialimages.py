@@ -28,7 +28,7 @@ class AerialImagesPublisher(Node):
         self.declare_parameter('twist_topic', '/quadctrl/flying_sensor/ctrl_twist_sp')
         self.declare_parameter('delta_t', 0.02)
         self.declare_parameter('output_size', 352)
-        self.declare_parameter('baseurl', 'https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE=normal&TILEMATRIXSET=PM&FORMAT=image/jpeg&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}')
+        self.declare_parameter('baseurl', 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}')
         self.declare_parameter('lat', 48.858327718853104)
         self.declare_parameter('lon', 2.294309636169546)
         self.declare_parameter('bearing', 0.0)
