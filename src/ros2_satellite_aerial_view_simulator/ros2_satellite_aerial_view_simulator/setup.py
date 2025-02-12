@@ -19,11 +19,9 @@ setup(
     ],
     install_requires=['setuptools'],
     # setup_requires will download aerialviewgenerator from github during setup
-    setup_requires=['AerialViewGenerator @ git+https://github.com/ricardodeazambuja/AerialViewGenerator.git'],
+    #setup_requires=['AerialViewGenerator @ git+https://github.com/ricardodeazambuja/AerialViewGenerator.git'],
     # however, the directory won't be there while it's reading the info here, therefore it needs to be hardcoded
-    package_dir = {
-        "aerialviewgenerator": os.getcwd() + f"/.eggs/aerialviewgenerator-0.0.1-py{python_version}.egg/aerialviewgenerator/"
-        },
+
     zip_safe=True,
     maintainer='ros2user',
     maintainer_email='ros2user@todo.todo',
