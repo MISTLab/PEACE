@@ -19,7 +19,8 @@ b) A blurry photo of grass in autumn <br />
 c) A photo of grass <br />
 d) A 3D photo of grass in morning <br />
 
-### Testing using DOVESEI docker run --runtime nvidia -it --rm --network=host --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY=$DISPLAY -v $(pwd):/home haechanmarkbong/blabberseg </br>
+### Testing using DOVESEI 
+docker run --runtime nvidia -it --rm --network=host --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY=$DISPLAY -v $(pwd):/home haechanmarkbong/blabberseg </br>
 git clone --recurse-submodules https://github.com/MISTLab/PEACE.git </br>
 sudo apt-get update  </br>
 sudo apt-get upgrade </br>
