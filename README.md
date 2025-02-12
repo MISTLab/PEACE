@@ -19,5 +19,13 @@ b) A blurry photo of grass in autumn <br />
 c) A photo of grass <br />
 d) A 3D photo of grass in morning <br />
 
+### Testing using DOVESEI docker run --runtime nvidia -it --rm --network=host --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY=$DISPLAY -v $(pwd):/home haechanmarkbong/blabberseg </br>
+git clone --recurse-submodules https://github.com/MISTLab/PEACE.git </br>
+sudo apt-get update  </br>
+sudo apt-get upgrade </br>
+colcon build --symlink-install --packages-select ros2_satellite_aerial_view_simulator ros2_open_voc_landing_heatmap ros2_open_voc_landing_heatmap_srv </br>
+source install/setup.bash </br>
+./experiements.bash </br>
+
 ## Publication
 For more information about PEACE, refer to our paper: https://arxiv.org/abs/2310.00085
