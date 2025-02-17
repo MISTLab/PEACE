@@ -15,7 +15,7 @@ PEACE enables the possibility of dynamically generating prompts that are specifi
 Comparison of CLIP and CLIPSeg’s original prompt engineering and PEACE using images from [CARLA](https://carla.org/). <br />
 
 a) A photo of grass <br />
-b) A blurry photo of grass in autumn <br />
+b) A blurred photo of grass in autumn <br />
 c) A photo of grass <br />
 d) A 3D photo of grass in morning <br />
 
